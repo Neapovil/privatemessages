@@ -1,0 +1,11 @@
+name: PrivateMessages
+main: com.github.neapovil.privatemessages.PrivateMessages
+version: 1.0.0
+api-version: 1.13
+author: Neapovil
+website: https://github.com/Neapovil/privatemessages
+depend:
+  - CommandAPI
+permissions:
+  privatemessages.command.message:
+    default: true
