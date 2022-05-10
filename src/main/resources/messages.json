@@ -1,0 +1,6 @@
+{
+  "messages": {
+    "sender": "<aqua>[<gray>me <aqua>-> <green><player_name><aqua>] <white><content>",
+    "receiver": "<aqua>[<green><player_name> <aqua>-> <gray>me<aqua>] <white><content>"
+  }
+}
