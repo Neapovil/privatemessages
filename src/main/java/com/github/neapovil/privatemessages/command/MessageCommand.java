@@ -18,12 +18,12 @@ public final class MessageCommand
                 .withPermission("privatemessages.command.message")
                 .withArguments(new EntitySelectorArgument("player", EntitySelectorArgument.EntitySelector.ONE_PLAYER))
                 .withArguments(new GreedyStringArgument("content"))
-                .executes((sender, args) -> {
-                    final Player player = (Player) args[0];
+                .executesPlayer((player, args) -> {
+                    final Player target = (Player) args[0];
                     final String content = (String) args[1];
 
-                    sender.sendMessage(plugin.getMessageComponent("sender", player.getName(), content));
-                    player.sendMessage(plugin.getMessageComponent("receiver", sender.getName(), content));
+                    player.sendMessage(plugin.getMessageComponent("sender", target.getName(), content));
+                    target.sendMessage(plugin.getMessageComponent("receiver", player.getName(), content));
                 })
                 .register();
     }
